@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>ReliefWeb Map Search</title>
+
+
+  <style type="text/css">
+
+/*<![CDATA[*/
+@import url(styles.css);
+<!--[if gte IE 5]>
+#container {
+/* For Internet Explorer: */
+width: expression(Math.min(parseInt(this.offsetWidth), 58 ) + "em");
+width: expression( document.body.clientWidth > (500/12) * parseInt(document.body.currentStyle.fontSize)? "58em":"auto" ); }
+<![endif]-->
+/*]]>*/
+  </style>
+</head>
+
+
+<body>
+
+<img src="reliefweb.png" alt="ReliefWeb" height="56" width="217">
+<form action="mapsearch.php"> <label> Country
+  <select name="country">
+  <option selected="selected" value="haiti">Haiti</option>
+  <option value="uk">UK</option>
+  </select>
+
+  </label> <label>Document Type
+  <select name="doctype">
+  <option selected="selected" value="map">Map</option>
+  <option value="proj_des">Project Descriptions</option>
+  </select>
+
+  </label>
+  <label>Keyword <input name="search"></label>
+  <input class="submit" value="Search" type="submit"></form>
+
+</body>
+</html>
