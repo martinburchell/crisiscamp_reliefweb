@@ -35,11 +35,20 @@
   $RSS_PHP->load($feed_url); 
   foreach($RSS_PHP->items as $item) 
   { 
-  	echo "<li><a href=\"";
-	print_r($item['link']['value']);
-	echo "\">";
-	print_r($item['title']['value']);
-        echo "</a></li><br/>"; 
+//   	echo "<li><a href=\"";
+// 	print_r($item['link']['value']);
+// 	echo "\">";
+// 	print_r($item['title']['value']);
+//         echo "</a></li><br/>"; 
+    $mappageurl = $item['link']['value'];
+    $getresult=http_get($mappageurl);
+    $mappagebody = http_parse_message($getresult)->body;
+    preg_match('/fullmaps_am.*?OpenElement/', $mappagebody, $mapPDFurl);
+    echo "<li><a href=\"http://www.reliefweb.int/rw/";
+    print_r($mapPDFurl[0]);
+    echo "\">";
+    print_r($item['title']['value']);
+    echo "</a></li><br/>"; 
   } 
 ?> 
 		</ul> 
