@@ -14,6 +14,7 @@
   $feed_url = ""; 
   $search_string = $_GET['search']; 
   $RSS_PHP = new rss_php; 
+  $localmapdir = "mapfiles/";
   switch($search_string) 
   { 
   	case "hospitals": 
@@ -35,17 +36,18 @@
   $RSS_PHP->load($feed_url); 
   foreach($RSS_PHP->items as $item) 
   { 
-//   	echo "<li><a href=\"";
-// 	print_r($item['link']['value']);
-// 	echo "\">";
-// 	print_r($item['title']['value']);
-//         echo "</a></li><br/>"; 
     $mappageurl = $item['link']['value'];
-    $getresult=http_get($mappageurl);
-    $mappagebody = http_parse_message($getresult)->body;
-    preg_match('/fullmaps_am.*?OpenElement/', $mappagebody, $mapPDFurl);
-    echo "<li><a href=\"http://www.reliefweb.int/rw/";
-    print_r($mapPDFurl[0]);
+    $localfile = $localmapdir . $item['guid']['value'] . '.pdf';
+    if (!file_exists($localfile))
+    {
+      $getresult=http_get($mappageurl);
+      $mappagebody = http_parse_message($getresult)->body;
+      preg_match('/fullmaps_am.*?OpenElement/', $mappagebody, $mapPDFname);
+      $mapPDFurl = "http://www.reliefweb.int/rw/" . $mapPDFname[0];
+      $pdffile = file_get_contents($mapPDFurl);
+      file_put_contents($localfile, $pdffile);
+    }
+    echo "<li><a href=\"" . $localfile;
     echo "\">";
     print_r($item['title']['value']);
     echo "</a></li><br/>"; 
