@@ -37,20 +37,32 @@
   foreach($RSS_PHP->items as $item) 
   { 
     $mappageurl = $item['link']['value'];
-    $localfile = $localmapdir . $item['guid']['value'] . '.pdf';
-    if (!file_exists($localfile))
+    $localuntiledfile = $localmapdir . $item['guid']['value'] . '.pdf';
+    $localtiledfile = $localmapdir . $item['guid']['value'] . '/' . $item['guid']['value'] . '.pdf';
+    $localtileviewer = $localmapdir . $item['guid']['value'] . '/openlayers.html';
+    if (!file_exists($localtiledfile) and !file_exists($localuntiledfile))
     {
       $getresult=http_get($mappageurl);
       $mappagebody = http_parse_message($getresult)->body;
       preg_match('/fullmaps_am.*?OpenElement/', $mappagebody, $mapPDFname);
       $mapPDFurl = "http://www.reliefweb.int/rw/" . $mapPDFname[0];
       $pdffile = file_get_contents($mapPDFurl);
-      file_put_contents($localfile, $pdffile);
+      file_put_contents($localuntiledfile, $pdffile);
     }
-    echo "<li><a href=\"" . $localfile;
-    echo "\">";
-    print_r($item['title']['value']);
-    echo "</a></li><br/>"; 
+    if (file_exists($localuntiledfile))
+    {
+      echo "<li>";
+      print_r($item['title']['value']);
+      echo " (<a href=\"" . $localuntiledfile . "\">PDF</a>) (no images yet)";
+      echo "</li><br/>";
+    }
+    if (file_exists($localtiledfile))
+    {
+      echo "<li>";
+      print_r($item['title']['value']);
+      echo " (<a href=\"" . $localtiledfile . "\">PDF</a>) (<a href=\"" . $localtileviewer . "\">images</a>)";
+      echo "</li><br/>";
+    }
   } 
 ?> 
 		</ul> 
