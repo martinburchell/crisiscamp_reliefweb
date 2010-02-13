@@ -1,0 +1,60 @@
+==================================================
+ReliefWeb light-weight map viewer proof-of-concept
+
+Code by Crisis Camp London crew
+==================================================
+
+Files:
+
+rss_php.php
+is an RSS feed parser, from http://rssphp.net/
+
+mapsearch.php
+gets latest map details from ReliefWeb via RSS feed.  At present we have feed
+URLs hard-coded as we don't have the details of how to generate the feed URLs
+automatically.  This takes three parameters via HTTP GET request: the country
+requested, the document type requested, and a keywork search term.  The country
+and document type are currently ignored, and the only keywords recognised are
+"idp" and "hospitals" - anything else will be ignored and treated as if the box
+was blank.
+To save bandwidth and improve performance, we store copies of the maps locally
+and can generate scrollable tilesets.  For each item in the RSS feed, we check
+whether there is a local copy of the PDF, and get a copy if there isn't.  If a
+copy has previously been made but no tile-set yet generated, we link to the file
+on our server and tell the user that the tiles haven't yet been generated.  If
+the tiles have been generated, we link to both the tile viewer and the original
+PDF file.
+When getting a copy of a file from ReliefWeb, from the RSS feed we get the URL
+of a landing page that links to the actual PDF file, so we download this HTML
+file and use a regular expression to extract the URL of the PDF.
+
+RSS-urls.txt
+is a note of the URLs of the RSS feeds which have been copied into mapsearch.php
+
+-------
+mapfiles (directory)
+is where the maps copied from ReliefWeb are stored.  They are named according to
+the guid in the RSS feed, and are initially stored in this directory.  Once a
+tile-set have been generated from a file, the tiles and the original PDF are
+moved into a sub-directory which has the guid as its name.  The other files in
+this directory (documented below) are from Harry Wood, and are also available
+from his site at http://harrywood.co.uk/maps/haiti/tiledpdf/
+
+mapfiles/cloudmade.html
+mapfiles/openlayers.html
+are two tile viewers.  They both do much the same thing.
+
+mapfiles/googletilecutter.sh
+is a GPLed Bash script by Ian C. Stevens (http://crazedmonkey.com/) that "Cuts
+an image into tiles suitable for use with Google Maps."
+
+mapfiles/generate.sh
+is run with the name of a PDF file as its only argument.  It uses ImageMagick to
+covert the PDF to a PNG image, and then runs googletilecutter.sh.  It does this
+at different sizes, for different zoom levels.  It then makes all the tiles it
+has generated world-readable and moves them in the appropriate sub-directory.
+TODO: This is *VERY* slow, and cannot be run in parallel.
+
+mapfiles/generateAll.sh
+runs generate.sh on each PDF file in a directory, in turn.  If you have a lot of
+PDFs, this can take several days to complete.  You have been warned!

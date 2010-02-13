@@ -50,8 +50,7 @@
     $localtileviewer = $localmapdir . $item['guid']['value'] . '/openlayers.html';
     if (!file_exists($localtiledfile) and !file_exists($localuntiledfile))
     {
-      $getresult=http_get($mappageurl);
-      $mappagebody = http_parse_message($getresult)->body;
+      $mappagebody=file_get_contents($mappageurl);
       preg_match('/fullmaps_am.*?OpenElement/', $mappagebody, $mapPDFname);
       $mapPDFurl = "http://www.reliefweb.int/rw/" . $mapPDFname[0];
       $pdffile = file_get_contents($mapPDFurl);
