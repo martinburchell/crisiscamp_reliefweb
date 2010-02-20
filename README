@@ -57,4 +57,4 @@ TODO: This is *VERY* slow, and cannot be run in parallel.
 
 mapfiles/generateAll.sh
 runs generate.sh on each PDF file in a directory, in turn.  If you have a lot of
-PDFs, this can take several days to complete.  You have been warned!
+PDFs, this can take several days to complete.  You have been warned! :)
