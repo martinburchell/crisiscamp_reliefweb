@@ -49,7 +49,7 @@
             	var pathName = window.location.pathname;
     			pathName = pathName.substring(0, pathName.lastIndexOf("/") + 1);
     			var path = "z" + z + "x" + x + "y" + y + "." + this.type; 
-                var url = window.location.host + pathName;
+                var url = "http://" + window.location.host + pathName;
                 
                 if (url instanceof Array) {
                     url = this.selectUrl(path, url);
