@@ -24,6 +24,12 @@ set -e
 filename=$1
 
 dirname=`basename $filename .pdf`
+
+if [ -d $dirname ]; then
+   echo $dirname already exists, skipping...
+   exit 0 
+fi
+
 mkdir $dirname
 
 echo ---------------------------------------------------

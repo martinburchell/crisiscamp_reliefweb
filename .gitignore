@@ -1,4 +1,5 @@
 mapfiles/*.png
 mapfiles/*.pdf
 mapfiles/*/*
+*~
 

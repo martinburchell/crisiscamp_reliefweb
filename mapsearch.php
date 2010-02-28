@@ -6,13 +6,17 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates 
  */ 
   
+  $search_string = $_GET['search'];
+  $country = $_GET['country'];
+  $doctype = $_GET['doctype'];
+
   include "./rss_php.php"; 
  /* country 
   * doctype 
   * search 
   */ 
   $feed_url = ""; 
-  $search_string = $_GET['search']; 
+
   $RSS_PHP = new rss_php; 
   $localmapdir = "mapfiles/";
   switch($search_string) 
@@ -27,6 +31,14 @@
   		$feed_url = "http://www.reliefweb.int/RWFeed/FastRSS?fql=and%28meta.collection%3Aor%28rwmaps%29%2Crwcc%3Ahti%2Crwrc%3A2%2Crwarchived%3Anot%28%271%27%29%2Cstring%28%22%22%2C+mode%3D%22simpleall%22%2Cannotation_class%3D%22user%22%29%29&view=rwallsppublished&hits=25&offset=0&qtf_lemmatize=1&sortby=rwpubdate-rwpubdatedisplay&sortdirection=descending&collapseon=batvuigeneric1"; 
 		break;
   }  
+  $RSS_PHP->load($feed_url);
+
+  if (count($RSS_PHP->items) == 0)
+  {
+    header('Location: index.php?failed=1&country=' . $country . '&doctype=' . $doctype . '&search=' . $search_string);
+    exit;
+//    $message = "No search results were found. Please search again.";
+  }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -34,14 +46,30 @@
 	<head>
 		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 		<?php
-			echo "<title>Haiti " . $search_string . " search</title>" 
+  			$title = 'Haiti - Maps - ' . $search_string;
+ 			echo "<title>$title</title>"; 
 		?>
+		<style type="text/css">
+
+/*<![CDATA[*/
+@import url(styles.css);
+<!--[if gte IE 5]>
+#container {
+/* For Internet Explorer: */
+width: expression(Math.min(parseInt(this.offsetWidth), 58 ) + "em");
+width: expression( document.body.clientWidth > (500/12) * parseInt(document.body.currentStyle.fontSize)? "58em":"auto" ); }
+<![endif]-->
+/*]]>*/
+  		</style>
 	</head> 
 	<body>
-<?php   
-  echo "<h1>Haiti " . $search_string . " search</h1>";
+<?php
+  echo "<h1>Search Results for Country Specific Information</h1>";
+ 
+  echo "<p>$title</p>";
+
   echo "<ul>"; 
-  $RSS_PHP->load($feed_url); 
+
   foreach($RSS_PHP->items as $item) 
   { 
     $mappageurl = $item['link']['value'];
@@ -72,6 +100,9 @@
     }
   } 
   echo "</ul>";
+	
 ?> 		 
+	<a href="index.php">Back to search</a>
 	</body> 
 </html>
+

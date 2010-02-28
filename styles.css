@@ -23,3 +23,16 @@ select, input
 {
 	width:auto;
 }
+
+h1
+{
+	font-size:100%;
+	font-weight:bold;
+	width:25em;
+}
+
+a.imagelink img
+{
+	border:none;
+}
+
