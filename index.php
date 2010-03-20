@@ -40,22 +40,34 @@ if ($failed)
 }
 ?>
 
-<form action="mapsearch.php"> <label> Which country?
-  <select name="country">
-  <option selected="selected" value="haiti">Haiti</option>
-  <!-- option value="uk">UK</option -->
-  </select>
+<form action="mapsearch.php">
+     <label for="country">Which country?</label>
+     <select name="country" id="country">
+     <option selected="selected" value="haiti">Haiti</option>
+     <!-- option value="uk">UK</option -->
+     </select>
 
-  </label> <label>What type of information?
-  <select name="doctype">
-  <option selected="selected" value="map">Map</option>
+  <label for="doctype">What type of information?</label>
+  <select name="doctype" id="doctype">
+     <option selected="selected" value="map">Map</option>
   <!-- option value="proj_des">Project Descriptions</option -->
   </select>
 
-  </label>
-  <label>Keywords, eg hospital <input name="search" value="<?php echo $search ?>"></label>
-  <input class="submit" value="Search" type="submit"></form>
+  <label for="source">Source</label>
+  <select name="source" id="source">
+     <option selected="selected" value="PDC">PDC</option>
+  </select>
 
+  <label for="database">Database</label>
+  <select name="database" id="database">
+     <option selected="selected" value="HDP">Humanitarian Data Portal</option>
+     <option value="RSS">ReliefWeb RSS Feeds</option>
+  </select>
+
+  <label for="search">Keywords, eg hospital</label>
+  <input name="search" id="search" value="<?php echo $search ?>">
+     <input class="submit" value="Search" type="submit">
+     </form>
 </body>
 </html>
 
