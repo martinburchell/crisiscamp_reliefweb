@@ -1,0 +1,195 @@
+"Data Name","Data Access","Access","DataType","DataCategory(s)","DataIndicator(s)","Cluster(s)","DataFormat(s)","Region","Country(s)","Source","Resolution","Point of Contact","Processing Instructions","Notes"
+"Active Hazards","http://www.pdc.org","Public","Natural Disaster","Incidents",,,"web service","World",,"PDC",,"Todd Bosse
+Sr. Geospatial Information Analyst
+Pacific Disaster Center
+1305 N.Holopono Street
+Kihei, HI USA 96753
++1.808.891.7943
+tbosse@pdc.org
+
+Chris Chiesa
+Chief Information Officer
++1.808.891.0525 ext. 953
++1.808.283.8679
+info@pdc.org","1) Open ArcCatalog and under 'GIS Servers' double click on 'Add ArcIMS Server'
+2) Type in the URL www.pdc.org
+3) Select 'Get List'
+4) Chose the service you want
+5) Preview in ArcCatalog or drag to ArcMap
+Note: With the WFS, you can get the attribute information associated with the disaster:-)","Email from Todd on 22 Oct 2009 - Thanks for your note, I think we have just the thing to help you. As part of its Global Hazards Information Network (GHIN, http://ghin.pdc.org), Pacific Disaster Center (PDC) publishes various mapservices for public consumption, one of them being active hazards. GHIN is a metadata explorer containing geospatial data and services, of both PDC's data holdings and those and its partners. It has been designed to facilitate data sharing relationships/partnerships around the globe (focused towards hazards and related basedata). I've recently met with your colleagues in Bangkok and happy to report that UN OCHA ROAP is now a GHIN partner. In the coming months we will be working with OCHA ROAP to catalog and ingest metadata on their data holdings into GHIN so that it can be found by GHIN users. I should add that GHIN partners retain full control over the release of their data, which is specified in the metadata.  To find services in GHIN, choose 'Live Data and Maps' as your Content Type and click 'Start Search'. You will be presented with a list of all the services that we are currently publishing. Services are available as ArcIMS Image, WMS, and WFS. The metadata record for each service has connection information, as does the Geospatial Information Services link on GHIN.  The service you are looking for is called 'PDC Active Hazards'. You can simply add a connection to http://www.pdc.org in the GIS Servers section of ArcCatalog. Then select the service and drag into ArcMap. The Active Hazards service has near-real time feeds for tropical storms, earthquakes, volcanoes, tsunami's, and more. Please see the metadata for that service for data sources and data refresh rates."
+"Afghanistan Datasets","http://www.aims.org.af/sroot.aspx?seckeyo=44&seckeyz=37","Public","Baseline",,,,"shapefile","Asia","Afghanistan","AIMS","1:500,000","Ali.Wali@aims.org.af",,
+"Africa Data Dissemination Service","http://earlywarning.cr.usgs.gov/adds/index.php","Public","Baseline","LandCover",,,,"Africa",,"USAID",,,,
+"Aid Workers Fatalities Data","http://www.patronusanalytical.com/aid%20worker%20fatalities/Fatal%20Incidents%20Aid%20Workers%20DB/Fatal%20Incidents%20data.html","Public","Complex Emergency","Incidents",,,"spreadsheet","World",,"Patronus Analytical",,,,
+"Armed Conflict Location and Event Data","http://www.acleddata.com/","Public","Complex Emergency","Incidents",,,,"World",,"ACLED",,"Dr. Clionadh Raleigh
+clionadh@gmail.com",,
+"ASTER DEM","http://www.gdem.aster.ersdac.or.jp/","Public","Baseline","Elevation",,,"image file","World",,"NASA","30-metre",,"http://www.echo.nasa.gov/reference/astergdem_tutorial.htm",
+"Average Precipitation (Annual and Monthly)","http://www.worldclim.org/download","Public","Baseline","Climate",,,"shapefile","World",,"WORLDCLIM","1-kilometre",,"Click on Current Conditions.  Then select 'Precipitation' under ESRI Grids - 30 arc-seconds.  This will give you the monthly precipitation averages.  For the annual data click on Bioclim and use Bio_12 'Annual Percipitation'","This map shows the average amount of precipitation falling in a year, based on approximately 50 years of data. The figures shown do not therefore represent the amount of precipitation that may occur in any given year."
+"CE-DAT Complex Emergency Database","http://www.cedat.be/","Public","Complex Emergency","Incidents",,,,"World",,"CRED",,,,
+"Climate Change Index","http://www.igbp.net/page.php?pid=504","Public","Natural Disaster","Climate",,,,"World",,"IGBP",,,,
+"CMEInfo","http://www.childmortality.org/cmeMain.html","Public",,,,,,"World",,"UNICEF",,,,
+"CountrySTAT","http://www.countrystat.org","Public","Baseline",,,,,"Africa",,"FAO",,,,
+"Daily Rainfall Estimates (RFE)","ftp://ftp.cpc.ncep.noaa.gov/fews/GIS/","Public","Baseline","Climate",,,"image file","Africa",,"NOAA","0.25-degree","Angel Bennet
+Meteorologist
+Wyle Information Systsms, LLC
+NOAA-Climate Prediction Center
+Projects: FEWS NET / MFEWS / AFN
+angel.m.bennett@noaa.gov
++1 301 763 8000 ext. 7584",,"See example of products derived from these data here: http://www.cpc.noaa.gov/products/fews/rfe.shtml.  This will help in classification."
+"DevInfo","http://www.devinfo.org","Public","Baseline",,,,,"World",,"UNICEF",,,,
+"Digital Chart of the World","http://www.maproom.psu.edu/dcw/","Public","Baseline",,,,"shapefile","World",,"NGA",,,,
+"Disaster / Incident Monitoring","http://210.185.184.53/ndccWeb/index.php?option=com_frontpage&Itemid=1","Public","Complex Emergency","Incidents",,,,"Asia","Philippines (the)","NDCC",,,,
+"Displacement","via email",,"Complex Emergency","Society",,,,"Africa","Somalia","UNHCR",,"Roberta Russo
++254-20-4222200 Landline
++254-73-3121136 Mobile
+russo@unhcr.org",,"ReliefWeb is on a mailing lists which receives updates on displacement numbers in email, table or map format.  Need to follow up with UNHCR to see if there is a better way to regularly receive these figures."
+"Earthquake Risk","http://www.pdc.org/geodata/world/earthquake_zones.zip","Public","Natural Disaster","Risk",,,"shapefile","World",,"UNEP",,"United Nations Environment Programme Global Resource Information Database (UNEP/GRID)
+Ron Witt
+11 chemin des Anémones, Chatelaine, Geneva, Switzerland
++41229178295, +41 229178029 (fax)
+ron.witt@grid.unep.ch",,"This is available as a WFS from PDC as well.  (Risks and Vulnerabilities)"
+"Earthquakes","http://neic.usgs.gov/neis/epic/epic.html","Public","Natural Disaster",,,,"spreadsheet","World",,"USGS",,,,
+"EM-DAT Emergency Events Database","http://www.emdat.be/","Public","Natural Disaster","Incidents",,,,"World",,"CRED",,,,"EM-DAT contains essential core data on the occurrence and effects of over 16,000 mass disasters in the world from 1900 to present. The database is compiled from various sources, including UN agencies, non-governmental organisations, insurance companies, research institutes and press agencies."
+"EmergencyInfo","http://www.devinfo.info/emergencyinfo/","Public","Baseline",,,,,"World",,"UNICEF",,,,
+"Financial Tracking Service","http://ocha.unog.ch/fts/pageloader.aspx","Public","Baseline","Funding",,,,"World",,"UNOCHA",,,,
+"Flood Inundation Polygons","ftp://129.170.22.44/Users/flood/Public/ShpFiles","Public","Natural Disaster",,,,"shapefile","World",,"DFO","250-metre","Robert Brakenridge
+G.Robert.Brakenridge@dartmouth.edu",,"Data are freely available upon request to Robert Brakenridge.  Use MODIS Rapid Response Subset data to identify water pixels on RGB (bands 7-2-1) geotiff files (http://rapidfire.sci.gsfc.nasa.gov/subsets/).  A GIS vector is then fit around the classified pixels.  The data are organized by MODIS Rapid Response Subset name, by date, and by Terra (""t"") or Aqua (""a"") source.
+Is is 250 m, with the inundation limits (what boundaries) fixed geographically to better than +/50 m.  Images appear on the rapid response nasa site in near real time..at most some hours after acquisition. Our processing only takes perhaps an hour. For each area on Earth there are two passes..am and pm.
+
+How fast maps and GIS data appear afterwards depends on our focus. If there is active flooding underway..and we know there is immediate need, then we can ourselves process and update daily...and those data may be less than 24 hours old in some cases.
+Currently publishing GIS files with date  names...but that, over the course of  a year for a particular subset, we intend to then merge all files into an annual maximum water layer and publish that accumulating file...as well as a variety of standard reference water files to compare the new water to. These will be at same location..I am working on a read me file to go there as well,"
+"Food Security Analysis Unit Datasets","http://www.fsausomali.org/index.php@id=25.html","Public",,"Farming",,,"document","Africa",,"FSAU","1:1M",,,
+"FuzzyG Gazatteer","http://dma.jrc.it/services/fuzzyg/default.asp","Public","Baseline","Location",,,"online database","World",,"JRC",,,,
+"GAUL","http://www.fao.org/geonetwork/srv/cn/metadata.show?id=12691","Licensed","Baseline","Boundaries",,,"shapefile","World",,"FAO","1:1M",,,
+"Geography Statistics","http://www.nationmaster.com/graph/geo_sur_are_sq_km-geography-surface-area-sq-km","Public","Baseline",,,,,"World",,"Nation Master",,,,
+"Geonames Web Feature Service","http://geonames.nga.mil/nameswfs/request.aspx?REQUEST=GetCapabilities&SERVICE=wfs&VERSION=1.1.0","Public","Baseline","Location",,,"web service","World",,"NGA",,"http://earth-info.nga.mil/gns/html/index.html","To add the WFS into ArcGIS:
+1) Open ArcCatalog
+2) Double Click on Interoperability Connections
+3) Type in the URLhttp://portal.nga.mil/names/request.asp?
+4) Either view in ArcCatalog or drag into ArcMap for viewing
+
+Zoom must be ATLEAST 1:2,000,000, and in some cases as far as 1:275,000 in order to view the data.","I cannot get the full WFS to work (i.e. access the database behind the dataset).  I emailed NGA but no response as of 17 July."
+"Geonames Web Map Service","http://geonames.nga.mil/names/request.asp?","Public","Baseline","Location",,,"web service","World",,"NGA",,"http://earth-info.nga.mil/gns/html/index.html","To add the WMS into ArcGIS:
+1) Open ArcCatalog
+2) Double Click on Add WMS Server
+3) Type in the URL http://portal.nga.mil/names/request.asp?
+4) Either view in ArcCatalog or drag into ArcMap for viewing
+
+Zoom must be ATLEAST 1:2,000,000, and in some cases as far as 1:275,000 in order to view the data.",
+"Geographic Information Support Team Data Repository","https://gist.itos.uga.edu","Restrictions","Baseline",,,,"shapefile","World",,"ITOS",,,,
+"Global Discovery","http://www.europa.uk.com/gd.php","Licensed","Baseline",,,,"shapefile","World",,"Europa Technologies","1:1M",,,
+"Global Impact and Vulnerability Alert System (GIVAS)","http://www.voicesofthevulnerable.net/",,,,,,,"World",,"UN",,,,"Work-in-progress.  The GIVAS is intended to help fill this gap by linking together existing early warning systems and making better use of new innovative ways of collecting real time data. The system is both intended to show impact (i.e. what's happening right now) and raise alarm bells as to potentially dramatically worsening vulnerabilities (i.e. what could happen if we don't act). It's main purpose is to ensure that we have the information and analysis needed to protect our most vulnerable populations against crisis. It is a tool to ensure that the Millennium Development Goals have a chance. "
+"Global Map","http://www.iscgm.org/","Public","Baseline",,,,"shapefile","World",,"ISCGM","1:1M",,,
+"Global Risk Data Platform","http://preview.grid.unep.ch/index3.php?preview=map","Public",,"Environment",,,,"World",,"UNEP",,,,
+"Ground impacts of weather in realation to food insecurity","ftp://ftp.cpc.ncep.noaa.gov/fews/weather_hazards/","Public","Natural Disaster",,,,"shapefile","World",,"NOAA",,"Angel Bennet
+Meteorologist
+Wyle Information Systsms, LLC
+NOAA-Climate Prediction Center
+Projects: FEWS NET / MFEWS / AFN
+angel.m.bennett@noaa.gov
++1 301 763 8000 ext. 7584",,"Data Categorized as follows:
+1) Favorable
+2) Somewhat Favorable
+3) Flooding
+4) Short-Term Dryness
+5) Drought
+6) Severe Drought
+7) Humanitarian Concern
+8) Extreme Event
+9) Improving Short-Term Dryness
+10) Improving Drought
+11) Improving Severe Drought
+12) Heavy Rain
+13) Heavy Snow
+14) Blowing Dust
+15) Extreme Cold
+16) Extreme Heat"
+"GTOPO30","http://eros.usgs.gov/#/Find_Data/Products_and_Data_Available/gtopo30_info","Public","Baseline","Elevation",,,"image file","World",,"USGS","1-kilometre",,,
+"Haiti Baseline Datasets","ftp://157.150.195.135/Data/","Public","Baseline",,,,"geodatabase","Americas","Haiti","MINUSTAH","1:1M",,,
+"Haiti GIS Datasets","http://oneresponse.info/Disasters/Haiti/MapCenter/Pages/GIS.aspx","Public","Baseline","Waters",,,"geodatabase","Americas","Haiti",,,,,
+"Hazard Risk","http://www.preventionweb.net/english/maps/index.php","Public","Natural Disaster","Risk",,,"image file","World",,"UN",,"Name: Pascal Peduzzi
+Organisation: UNEP/DEWA/GRID-Europe
+Phone: (+41 22) 917 82 37 & Fax: +41 22 917 8029
+URL: http://www.grid.unep.ch
+Email: Pascal.Peduzzi@grid.unep.ch
+Role: Head of Early Warning Unit","Click on Data Download.  Select a Hazard Type.  Select on the specific data set.  If that dataset is available for download a box will appear on the right.  Click on Download and follow instructions to download a raster dataset that can easily be loaded into ArcGIS. Also available on the site is the metadata and a preview. ",
+"Human Development Reports Database","http://hdr.undp.org/en/statistics/data/","Public","Baseline",,,,,"World",,"UNDP",,,,
+"IDP Global Statistics","http://www.internal-displacement.org/8025708F004CE90B/%28httpPages%29/22FB1D4E2B196DAA802570BB005E787C?OpenDocument&count=1000","Public","Complex Emergency","Society",,,"interactive map","World",,"ACLED",,,,
+"Indonesia Disaster Data and Information","http://dibi.bnpb.go.id/DesInventar/dashboard.jsp?countrycode=id&continue=y&lang=EN","Public","Natural Disaster","Incidents",,,"online database","Asia","Indonesia","Indonesia NDMA",,,,
+"LandScan","http://www.ornl.gov/sci/landscan/","Licensed","Baseline","Society",,,"image file","World",,"Oak Ridge National Labratory","1-kilometre",,"http://www.ornl.gov/sci/landscan/landscanCommon/landscan_faq.html",
+"NASA Earth Observatory Global Maps","http://earthobservatory.nasa.gov/GlobalMaps/","Public","Baseline","LandCover",,,"image file","World",,"NASA",,,,
+"National Basic Food Prices","http://www.fao.org/giews/pricetool/","Public","Baseline","Economy",,,,"World",,"FAO",,,,
+"Neo Web Map Service","http://neo.sci.gsfc.nasa.gov/View.html?page=AboutWMS","Public","Baseline","LandCover",,,"web service","World",,"NASA",,,,
+"Netpas","http://www.netpas.net","Public","Baseline","Transportation",,,"online database","World",,,,,,
+"Open Street Map","http://www.openstreetmap.org/","Public","Baseline","Transportation",,,"shapefile","World",,"OSM",,"Mikel Maron
+mikel_maron@yahoo.com",,
+"Rainfall Averages and Anomalies","http://mirador.gsfc.nasa.gov/cgi-bin/mirador/presentNavigation.pl?tree=project&dataset=3B43:%20Monthly%200.25%20x%200.25%20degree%20merged%20TRMM%20and%20other%20sources%20estimates&project=TRMM&dataGroup=Gridded&version=006","Public","Baseline","Climate",,,"image file","World",,"NASA","0.25-degree","GES DISC User Services
+help-disc@listserve.gsfc.nasa.gov
+Phone: +1 301 614 5224
+URL: http://disc.sci.gsfc.nasa.gov
+FAQ: http://disc.sci.gsfc.nasa.gov/faq/faq_contents.shtml","1) Select the month and year you want from the following web page (http://mirador.gsfc.nasa.gov/cgi-bin/mirador/presentNavigation.pl?tree=project&dataset=3B43:%20Monthly%200.25%20x%200.25%20degree%20merged%20TRMM%20and%20other%20sources%20estimates&project=TRMM&dataGroup=Gridded&version=006)
+2) Select NetCDF as the download format
+3) In ArcMap, open ArcToolbox and navigate to 'Multidimension Tools'
+4) Double click on 'Make NetCDF Raster Layer' and following the instructions outlined here http://webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=Representing_netCDF_data_as_a_raster_layer
+- The raster will appear automatically as a layer in the layer panel, however it is a 'in-memory' raster and cannot be seen in the ArcCatalog tree therefore it needs to be exported to a raster
+5) Right click on the layer in ArcMap and select Data > Export Data and export the data as an img file ","There is also a WMS available (see below)"
+"Rainfall Averages and Anomalies","http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?","Public","Baseline","Climate",,,"web service","World",,"NASA","0.25-degree","GES DISC User Services
+help-disc@listserve.gsfc.nasa.gov
+Phone: +1 301 614 5224
+URL: http://disc.sci.gsfc.nasa.gov
+FAQ: http://disc.sci.gsfc.nasa.gov/faq/faq_contents.shtml","Open Arc Catalog
+Click on GIS Servers - Add WMS Server
+A window appears. Enter:  http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_trmm?
+Choose version  1.1.1 Then hit Get layers.
+You will see some data layers.  Click OK
+Now open ArcMap.  Add data.  
+Goto GIS Servers - OGC WMS Server for TRMM Level....
+Double click on the WMS Server again, then double click again.
+Now you should see a bunch of layers.  These can be added to your map.","Historical data can be accessed as described above in row 4."
+"Second Administrative Level Boundaries (SALB)","http://www.unsalb.org/","Public","Baseline","Boundaries",,,"shapefile","World",,"WHO","1:1M","salb@un.org",,
+"Satellite imagery of disasters","http://www.disasterscharter.org/home","Public","Natural Disaster",,,,"image file","World",,"International Charter of Space and Major Disasters",,,,
+"Seasonal Precipitation Forecast","http://portal.iri.columbia.edu/portal/server.pt     and follow directions under column N.","Public","Baseline","Climate",,,"txt file","World",,"IRI","0.25-degree","Anthony Barnston
+Lead Forecaster
+Climate and ENSO Forecasting, Outreach, Training
+111 Monell
+61 Route 9W
+Palisades, New York 10964
+Phone: 845 680 4447
+Fax: 845 680 4864
+tonyb@iri.columbia.edu","First, go to the IRI's home page. 
+On the right-center part of the page, under Quick Links, you will see that one of the options is Data Library. Click on it. 
+On the left side of the Data Library entry page, on the blue vertical bar on the left side, click where it says ""by source"". 
+Scroll down to ""IRI"", and click on it. 
+Click on Forecast Division.  Click on Seasonal Forecast.  Click on precipitation (if that is what you want).  Click on tercile probability. 
+Click where it says Data Selection (toward the upper right side of page). 
+    In the panel where it says ""Setting Ranges"", change the text to what  you want. If you want the Jan-Feb-Mar forecast for Dec 2009, then you put the following:
+Forecast Lead TIme in Months 1. to 1. 
+Month Forecast Issued: Dec 2009 to Dec 2009
+Click on ""restrict ranges"" after you have specified the subset that you want 
+Then click on ""stop selecting"", at the bottom of the panel just above the panel you have just been working. 
+You should be taken back to the page you saw previously. Now you are ready to download the data file. Click on ""Data Files"" in the upper right. 
+Now you get a large range of options of data format for the data to be downloaded. 
+Goto: GIS-Compatible Formats - 2-Dimensional Table
+Download Below_Normal and Above_Normal files.
+Add .txt extension to files in Windows Explorer. 
+Go to ArcTools. Coversion Tools - To Raster - ASCII to Raster.  Input txt file as the Input raster and generate the raster
+Goto ArcToolbox - Data Management Tools - Projections and Transformations - Define Projection - I recommend WGS84 Lat/Lon
+Both files should be in your ArcGIS.  Open Spatial Analyst tool bar.  
+Goto Reclassify.  Change the values for Above Normal and change all values to negative. (So if its 10 change it to -10)
+Go to Cell Statistics.  Add Below Normal, and the Reclass of Above Normal. Overlay statistic: Sum
+A file Sum is opened. Export the data to an ArcGRID (or whatever).  ","To see IRI's online maps of the latest forecast data you can see: http://portal.iri.columbia.edu/portal/server.pt?open=512&objID=944&PageID=7868&mode=2"
+"Sistema de Alerta Temprana para Centroamerica","http://www.satcaweb.org/","Public","Natural Disaster",,,,"spreadsheet","Americas",,"CEPREDENAC",,,,
+"Sphere Project - Minimum standards in disaster response","http://www.sphereproject.org/","Public",,,,,,"World",,"SCHR",,,,
+"Storm Intensity Zones","http://www.pdc.org/geodata/world/stormzones.zip","Public","Natural Disaster","Climate",,,"shapefile","World",,"Munich Re.",,"U.S. Geological Survey, Crowding the Rim GIS Development Team, 345 Middlefield Road, MS 975, Menlo Park, CA., 94025, www.crowdingtherim.org
+Also: Munich Reinsurance Company (MunichRe), Geoscience Research Group (R&D/Geo), 107 Koeniginstrasse, Munich, Germany, D-80791",,"This is available as a WFS from PDC as well.  (Risks and Vulnerabilities)"
+"Storm Tracks","http://weather.unisys.com/hurricane/index.html","Public","Natural Disaster","Climate",,,"txt file","World",,"UNISYS",,"For questions and information on this server, NOAAPORT and WXP, contact Dan Vietor at devo@ks.unisys.com","Data available online in txt format.
+Craig Williams downloaded all the storm data and used a plug in for MapInfo to create a shapefile.  This is available from ROAP","This is available as a WFS from PDC as well. (Historical Hazards)"
+"The World Bank Data Finder","http://datafinder.worldbank.org/","Public","Baseline",,,,"online database","World",,"World Bank",,,,
+"Uganda shapefiles","http://www.ugandaclusters.ug/geo-im.htm","Public","Baseline",,,,"shapefile","Africa","Uganda","Uganda Cluster",,,,
+"UNEP Geo Data Portal ","http://geodata.grid.unep.ch/","Public","Baseline","Environment",,,"online database","World",,"UNEP",,,,
+"UNHCR Statistical Online Population Database","http://apps.who.int/globalatlas/dataQuery/default.asp","Public","Complex Emergency","Society",,,"online database","World",,"UNHCR",,,,
+"Volcanoes","http://www.volcano.si.edu/world/","Public","Baseline","Geoscientific",,,"spreadsheet","World",,"Smithsonian Institution",,,"Click on ""Excel"" next to where it says ""Summary List"" This will open a list of volcanoes, by type, with Lat/Lon coordinates. ","This is available as a WFS from PDC as well. (Historical Hazards)"
+"WHO Statistical Information System Database","http://apps.who.int/whosis/data/Search.jsp","Public","Baseline",,,,"online database","World",,"WHO",,,,
+"World Aeronautical Database","http://worldaerodata.com/","Public","Baseline","Transportation",,,"online database","World",,"NGA",,,,
+"World Population Prospects","http://esa.un.org/unpp/index.asp","Public","Baseline","Society",,,"online database","World",,"UNPD",,,,
+"World Urbanization Prospects","http://esa.un.org/unup/","Public","Baseline","Society",,,"online database","World",,"UNPD",,,,
+"Vector Map (VMAP)",,,"Baseline",,,,,"World",,"NGA",,,,
