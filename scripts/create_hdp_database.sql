@@ -10,6 +10,7 @@ CREATE TABLE `inventory` (
   `dataCategoryid` smallint(10) default NULL,
   `dataIndicatorid` smallint(10) default NULL,
   `clusterid` smallint(10) default NULL,
+  `dataFormatid` smallint(10) default NULL,
   `regionid` smallint(10) default NULL,
   `countryid` smallint(10) default NULL,
   `sourceid` smallint(10) default NULL,
@@ -120,7 +121,7 @@ CREATE TABLE `source` (
   `shortName` varchar(255) default NULL,
   `organization` varchar(255) default NULL,
   `areaOfInterest` varchar(3) default NULL,
-  `sectorid` smallint(6) default NULL,
+  `sector` text default NULL,
   `website` text, 
   `lastUpdated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)

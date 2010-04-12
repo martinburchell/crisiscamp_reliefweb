@@ -12,6 +12,6 @@ class Importer(object):
         if integer or value == "null":
             return value + ","
     
-        return "'" + value.replace("'", "\\\'") + "',"
+        return "'" + value.replace("'", "\\\'") + "'"
     
     
