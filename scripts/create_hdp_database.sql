@@ -1,3 +1,6 @@
+CREATE DATABASE reliefweb
+USE reliefweb
+
 DROP TABLE IF EXISTS `inventory`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
@@ -121,8 +124,19 @@ CREATE TABLE `source` (
   `shortName` varchar(255) default NULL,
   `organization` varchar(255) default NULL,
   `areaOfInterest` varchar(3) default NULL,
-  `sector` text default NULL,
+  `sectorid` smallint(6) default NULL,
   `website` text, 
+  `lastUpdated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `sector`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `sector` (
+  `id` smallint(6) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
   `lastUpdated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
