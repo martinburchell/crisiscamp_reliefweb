@@ -3,4 +3,6 @@ mapfiles/*.pdf
 mapfiles/*/*
 *~
 scripts/*.pyc
-
+.buildpath
+.project
+.settings/*

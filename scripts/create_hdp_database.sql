@@ -22,6 +22,7 @@ CREATE TABLE `inventory` (
   `processingInstructions` text,
   `notes` text,
   `lastUpdated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `isPublished` BOOLEAN NOT NULL DEFAULT FALSE
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
