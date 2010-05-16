@@ -1,8 +1,7 @@
 <?php
 
 //Connect to database
-mysql_connect("localhost","root","idealp") or die(mysql_error());
-//mysql_connect("localhost","root","3r4frm") or die(mysql_error());
+mysql_connect("localhost","reliefweb","reliefweb") or die(mysql_error());
 mysql_select_db("reliefweb") or die(mysql_error());
 
 //Check input values
